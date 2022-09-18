@@ -1,0 +1,24 @@
+.video-container {
+    background-color: black;
+    height: 40vh;
+    width: 35vw;
+    border-radius: 10px;
+}
+
+video {
+    border-radius: 10px;
+    height: 40vh;
+    width: 35vw;
+    object-fit: cover;
+    background-color: black;
+}
+
+.full-screen {
+    height: 100vh;
+    width: auto;
+}
+
+.room-title {
+    margin: 20px auto 20px auto;
+    border-radius: 20px;
+}
