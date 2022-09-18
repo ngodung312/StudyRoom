@@ -2,11 +2,6 @@ import mediapipe as mp
 import cv2
 import numpy as np
 
-mp_drawing = mp.solutions.drawing_utils
-mp_pose = mp.solutions.pose
-cap = cv2.VideoCapture(0)
-flag_thankyou = "Not Detected"
-flag_love = "Not Detected"
 
 def calculate_angle(a,b,c):
 
@@ -21,7 +16,13 @@ def calculate_angle(a,b,c):
         angle = 360-angle
 
     return angle
-
+# def detect():
+    
+mp_drawing = mp.solutions.drawing_utils
+mp_pose = mp.solutions.pose
+cap = cv2.VideoCapture(0)
+flag_thankyou = "Not Detected"
+flag_love = "Not Detected"
 with mp_pose.Pose(min_detection_confidence=0.7, min_tracking_confidence=0.7) as pose:
 
     while cap.isOpened():
@@ -82,3 +83,4 @@ with mp_pose.Pose(min_detection_confidence=0.7, min_tracking_confidence=0.7) as 
 
 cap.release()
 cv2.destroyAllWindows()
+# return
